@@ -81,6 +81,7 @@ void eraseMap(HashMap * map,  char * key) {
   Pair* aux = searchMap(map, key);
   if (aux != NULL) {
     aux->key = NULL;
+    map->size--;
   }
   
 }
