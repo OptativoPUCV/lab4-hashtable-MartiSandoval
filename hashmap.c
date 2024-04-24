@@ -108,13 +108,14 @@ Pair * firstMap(HashMap * map) {
   if (map->size == 0) return NULL;
   
   long i = 0;
-  while (map->buckets[i] == NULL && map->buckets[i]->key == NULL) {
-    i++;
-    if (i == 0) {
-      return NULL;
-    } 
-  }
-  return map->buckets[i]; 
+  while (i < map->capacity) {
+    if (map->buckets[i] != NULL) {
+      return map->buckets[i];
+    }
+    i = (i + 1) % map->capacity;
+  } 
+  
+  return NULL; 
 }/*
   for (long i = 0; i < map->capacity; i++) {
     if (map->buckets[i] != NULL && map->buckets[i]->key != NULL) {
@@ -123,7 +124,7 @@ Pair * firstMap(HashMap * map) {
     }
   }
   return NULL;
-}*/
+  }*/
 
 Pair * nextMap(HashMap * map) {
   if (map->current == -1) 
