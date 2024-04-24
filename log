@@ -580,3 +580,12 @@ Wed 24 Apr 2024 02:59:09 AM UTC:
  tests:  15|2
 total_score: 50/70
 044ab06
+Wed 24 Apr 2024 03:01:48 AM UTC: 
+ hashmap.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:150:1: error: expected identifier or ‘(’ before ‘}’ token
+  150 | }
+      | ^
+Compilation failed
+7414d23
