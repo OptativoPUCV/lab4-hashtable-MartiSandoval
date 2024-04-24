@@ -132,6 +132,6 @@ Pair * nextMap(HashMap * map) {
       return NULL;
     }
   }
-  //map->current = aux;
-  return map->buckets[aux];
+  map->current = aux;
+  return map->buckets[map->current + 1];
 }
