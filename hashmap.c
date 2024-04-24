@@ -119,8 +119,8 @@ Pair * firstMap(HashMap * map) {
  }
 
 Pair * nextMap(HashMap * map) {
-  if (map->current == -1) 
-    return NULL;
+  if (map->size == 0 || map->current == -1) 
+    return NULL;  
   
   long aux = map->current;
   while (map->buckets[aux] == NULL || map->buckets[aux]->key == NULL) {
@@ -130,5 +130,5 @@ Pair * nextMap(HashMap * map) {
     }
   }
   map->current = aux;
-  return map->buckets[aux];
+  return map->buckets[map->current];
 }
