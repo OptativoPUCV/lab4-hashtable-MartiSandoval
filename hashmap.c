@@ -119,12 +119,13 @@ Pair * firstMap(HashMap * map) {
  }
 
 Pair * nextMap(HashMap * map) {
-  if (map->size == 0 || map->current == -1 || map->capacity == 0 || map == NULL) 
+  if (map->size == 0 || map->current == -1 || map->capacity == 0) 
     return NULL;  
   
   long aux = map->current + 1;
   while (map->buckets[aux] == NULL || map->buckets[aux]->key == NULL) {
     aux = (aux + 1) % map->capacity;
+    if (aux == map->capacity) return NULL;
     if (aux == map->current + 1) {
       return NULL;
     }
