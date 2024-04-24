@@ -109,12 +109,11 @@ Pair * firstMap(HashMap * map) {
   
   long i = 0;
   while (map->buckets[i] == NULL && map->buckets[i]->key == NULL) {
-    i = (i + 1) % map->capacity;
+    i++;
     if (i == 0) {
       return NULL;
     } 
   }
-  map->current = i;
   return map->buckets[i]; 
 }/*
   for (long i = 0; i < map->capacity; i++) {
