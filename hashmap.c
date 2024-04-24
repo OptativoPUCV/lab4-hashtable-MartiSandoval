@@ -119,7 +119,7 @@ Pair * firstMap(HashMap * map) {
  }
 
 Pair * nextMap(HashMap * map) {
-  if (map->size == 0 || map->current == -1) 
+  if (map->size == 0 || map->current == -1 || map->capacity == 0) 
     return NULL;  
   
   long aux = map->current + 1;
