@@ -146,5 +146,5 @@ Pair * nextMap(HashMap * map) {
     aux++;
   }
   return NULL;
-  }
 }
+
