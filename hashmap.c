@@ -58,7 +58,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->buckets[pos] = par;
     map->size++;
   }
-}*/
+}*/}
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
