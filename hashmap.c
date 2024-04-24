@@ -123,7 +123,7 @@ Pair * nextMap(HashMap * map) {
     return NULL;
   
   long aux = map->current;
-  while (aux == -1 || map->buckets[aux]->key == NULL) {
+  while (map->buckets[aux]->key == NULL) {
     aux = (aux + 1) % map->capacity;
     if (aux == map->current) {
       return NULL;
