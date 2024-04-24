@@ -50,8 +50,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   else {
     for (long i = 0; i < map->capacity; i++) {
       if (is_equal(map->buckets[i]->key, par->key)) {
-        map->buckets[i]->key = par->key;
-        map->buckets[i]->value = par->value;
+        map->buckets[i] = par;
       }
     }
   }
