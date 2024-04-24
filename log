@@ -448,3 +448,9 @@ hashmap.c:126:19: error: expected ‘)’ before ‘or’
       |                   )
 Compilation failed
 96991d6
+Wed 24 Apr 2024 02:37:40 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|2
+total_score: 50/70
+e79dc19
