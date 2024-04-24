@@ -105,13 +105,27 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  long i = 0;
+  /*long i = 0;
   while (map->buckets[i] == NULL) {
     i = (i + 1) % map->capacity;
     if (i == -1) {
       return NULL;
     } 
   }
+  return map->buckets[i]; */
+  long i = 0;
+  long checkedBuckets = 0; // Variable to track how many buckets have been checked
+
+  while (map->buckets[i] == NULL) {
+    i = (i + 1) % map->capacity;
+    checkedBuckets++;
+
+    // If we have checked all buckets without finding a non-empty one, return NULL
+    if (checkedBuckets == map->capacity) {
+      return NULL;
+    }
+  }
+
   return map->buckets[i];
 }
 
