@@ -48,12 +48,15 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->size++;
   }
   else {
-    for (long i = 0; i < map->capacity; i++) {
-      if (is_equal(map->buckets[i]->key, par->key)) {
-        map->buckets[i] = par;
+    while (map->buckets[pos] != NULL) {
+      if (is_equal(map->buckets[pos]->key, par->key)) {
+        map->buckets[pos] = par;
+        return;
       }
+      pos = (pos + 1) % map->capacity;  
     }
-  }
+    map->buckets[pos] = par;
+    map->size++;
   
 }
 
