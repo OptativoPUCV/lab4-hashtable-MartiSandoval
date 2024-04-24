@@ -108,10 +108,9 @@ Pair * firstMap(HashMap * map) {
   long i = 0;
   while (map->buckets[i] == NULL) {
     i = (i + 1) % map->capacity;
-    if (map->size == 0) {
+    if (i == 0) {
       return NULL;
-    }
-    
+    } 
   }
   
   return map->buckets[i];
