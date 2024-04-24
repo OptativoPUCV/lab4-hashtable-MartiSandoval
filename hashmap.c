@@ -124,7 +124,7 @@ Pair * firstMap(HashMap * map) {
       i = (i + 1) % map->capacity;
     } while (i != start);
     return NULL;
-  }
+  
   
 }
 
