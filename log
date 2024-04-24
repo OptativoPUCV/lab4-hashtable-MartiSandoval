@@ -19,3 +19,14 @@ Wed 24 Apr 2024 12:26:18 AM UTC:
  tests:  1|5
 total_score: 10/70
 c085c37
+Wed 24 Apr 2024 12:33:11 AM UTC: 
+ hashmap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:9: error: unused variable ‘par’ [-Werror=unused-variable]
+   43 |   Pair *par = createPair(key, value);
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+889c946
