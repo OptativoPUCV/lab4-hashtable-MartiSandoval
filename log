@@ -437,3 +437,14 @@ Wed 24 Apr 2024 02:36:47 AM UTC:
  tests:  13|2
 total_score: 50/70
 4524aea
+Wed 24 Apr 2024 02:37:34 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:126:19: error: expected ‘)’ before ‘or’
+  126 |   while (aux == -1 or map->buckets[aux]->key == NULL) {
+      |         ~         ^~~
+      |                   )
+Compilation failed
+96991d6
