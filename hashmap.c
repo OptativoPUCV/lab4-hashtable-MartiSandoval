@@ -63,15 +63,15 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
   enlarge_called = 1; //no borrar (testing purposes)
   long nuevaC = map->capacity * 2;
-  HashMap *old = (HashMap *) malloc(sizeof(HashMap) * nuevaC);
+  HashMap *temp = (HashMap *) malloc(sizeof(HashMap) * nuevaC);
   
-  old->size = 0;
+  temp->size = 0;
   for (long i = 0; i < nuevaC; i++) {
-    old->buckets[i] = NULL;
-    insertMap(old, map->buckets[i]->key, map->buckets[i]->value);
+    temp->buckets[i] = NULL;
+    insertMap(temp, map->buckets[i]->key, map->buckets[i]->value);
   }
-  map = old;
-  free(old);
+  map->buckets = temp->buckets;
+  free(temp->buckets);
 }
 
 
