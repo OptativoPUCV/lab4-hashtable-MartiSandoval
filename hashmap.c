@@ -70,13 +70,13 @@ void enlarge(HashMap * map) {
   Pair *nuevo = (Pair *) malloc(sizeof(Pair) * nuevaC);
 
   for (long i = 0; i < nuevaC; i++) {
-    nuevo[i] = NULL;
+    nuevo[i]->key = NULL;
   }
   map->buckets = nuevo;
   map->size = 0;
   for(long i = 0; i < nuevaC; i++)
   {
-    if(aux[i] != NULL)
+    if(aux[i]->key != NULL)
       insertMap(map, aux[i].key, aux[i].value);
   }
   map->capacity = nuevaC;
