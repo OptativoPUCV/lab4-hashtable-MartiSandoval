@@ -673,3 +673,8 @@ hashmap.c:67:10: error: unused variable ‘par’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 045f940
+Thu 25 Apr 2024 01:16:37 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+465de21

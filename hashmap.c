@@ -72,7 +72,7 @@ void enlarge(HashMap * map) {
     temp->buckets[i] = NULL;
     insertMap(temp, map->buckets[i]->key, map->buckets[i]->value);
   }
-  map->buckets = temp->buckets;
+  map->buckets = par;
   free(temp->buckets);
 }
 
