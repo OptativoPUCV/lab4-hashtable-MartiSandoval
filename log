@@ -709,3 +709,14 @@ hashmap.c:75:5: error: ‘temp’ may be used uninitialized [-Werror=maybe-unini
 cc1: all warnings being treated as errors
 Compilation failed
 063fd25
+Thu 25 Apr 2024 01:30:19 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+test.c: In function ‘enlarge’:
+hashmap.c:77:7: error: ‘temp’ is used uninitialized [-Werror=uninitialized]
+   77 |   map = temp;
+      |   ~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6ce4944
