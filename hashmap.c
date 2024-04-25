@@ -65,13 +65,14 @@ void enlarge(HashMap * map) {
   Pair **aux = map->buckets;
   long nuevaC = map->capacity * 2;
   aux = (Pair **) malloc(sizeof(Pair *) * nuevaC);
+  HashMap *temp;
   
   map->size = 0;
   for (long i = 0; i < map->capacity; i++) {
     map->buckets[i] = NULL;
   }
   for (long i = 0; i < map->capacity; i++) {
-    insertMap(map, map->buckets[i]->key, map->buckets[i]->value);
+    insertMap(temp, map->buckets[i]->key, map->buckets[i]->value);
   }
   free(aux);
 }

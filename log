@@ -698,3 +698,14 @@ Thu 25 Apr 2024 01:28:08 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 1e196d6
+Thu 25 Apr 2024 01:29:47 AM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:75:5: error: ‘temp’ may be used uninitialized [-Werror=maybe-uninitialized]
+   75 |     insertMap(temp, map->buckets[i]->key, map->buckets[i]->value);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+063fd25
