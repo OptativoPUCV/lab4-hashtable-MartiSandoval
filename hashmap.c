@@ -67,10 +67,10 @@ void enlarge(HashMap * map) {
   
   temp->size = 0;
   for (long i = 0; i < nuevaC; i++) {
-    temp->buckets[i] = NULL;
+    //temp->buckets[i] = NULL;
     insertMap(temp, map->buckets[i]->key, map->buckets[i]->value);
   }
-
+  
 }
 
 
