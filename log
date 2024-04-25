@@ -720,3 +720,28 @@ hashmap.c:77:7: error: ‘temp’ is used uninitialized [-Werror=uninitialized]
 cc1: all warnings being treated as errors
 Compilation failed
 6ce4944
+Thu 25 Apr 2024 03:38:21 AM UTC: 
+ hashmap.c | 23 ++++++++++++++---------
+ 1 file changed, 14 insertions(+), 9 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:7: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   67 |   aux = map->buckets;
+      |       ^
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:33,
+                 from test.c:3:
+hashmap.c:73:16: error: incompatible types when assigning to type ‘Pair’ from type ‘void *’
+   73 |     nuevo[i] = NULL;
+      |                ^~~~
+In file included from test.c:4:
+hashmap.c:75:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   75 |   map->buckets = nuevo;
+      |                ^
+hashmap.c:79:15: error: invalid operands to binary != (have ‘Pair’ and ‘void *’)
+   79 |     if(aux[i] != NULL)
+      |        ~~~~~~ ^~
+      |           |
+      |           Pair
+cc1: all warnings being treated as errors
+Compilation failed
+514a86e
