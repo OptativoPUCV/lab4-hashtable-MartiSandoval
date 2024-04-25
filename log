@@ -765,3 +765,17 @@ hashmap.c:79:14: error: invalid type argument of ‘->’ (have ‘Pair’)
 cc1: all warnings being treated as errors
 Compilation failed
 9a47a20
+Thu 25 Apr 2024 03:39:04 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:67:7: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   67 |   aux = map->buckets;
+      |       ^
+hashmap.c:75:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   75 |   map->buckets = nuevo;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+06bf109
